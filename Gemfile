@@ -33,6 +33,7 @@ group :development, :test do
   gem 'sqlite3', '1.4.2'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do
