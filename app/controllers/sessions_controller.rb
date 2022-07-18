@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
     if user&.authenticate(params[:session][:password])
       # ユーザーログイン後にユーザー情報のページにリダイレクトする
       log_in user
+      remember user
       redirect_to user #実際はuser_url(user)のこと
     else
       # エラーメッセージを作成する
