@@ -8,3 +8,5 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 workers ENV.fetch("WEB_CONCURRENCY") { 2 }
 preload_app!
 plugin :tmp_restart
+
+worker_timeout 500 #debuggerのアイドル時間を伸ばしてみる2022/9/26

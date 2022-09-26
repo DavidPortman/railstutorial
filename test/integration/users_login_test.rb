@@ -63,7 +63,8 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 
   test "login with remembering" do
     log_in_as(@user, remember_me: '1')
-    assert_equal cookies['remember_token'], assigns(:user).remember_token
+    assert_not_empty cookies[:remember_token]
+    #assignsメソッドについてはノートの10章１３を参照
   end
 
   test "login without remembering" do
@@ -76,3 +77,4 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   end
 
 end
+
