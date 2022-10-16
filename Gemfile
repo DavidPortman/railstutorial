@@ -7,6 +7,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'bcrypt',         '3.1.13'
 # Use sqlite3 as the database for Active Record
+gem 'faker',                   '2.20.0'
 gem 'bootstrap-sass', '3.4.1'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
